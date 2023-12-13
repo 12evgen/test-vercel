@@ -2,8 +2,9 @@ name: Deploy to production (Vercel)
 
 on:
   push:
-    branches:
-      - main
+    # Pattern matched against refs/tags
+    tags:
+      - '*' # Push events to every tag not containing /
 
 jobs:
   deploy:
@@ -12,7 +13,7 @@ jobs:
 
     environment:
       name: production
-      url: https://test-vercel-seven-roan.vercel.app
+      url: https://test-vercel-production.vercel.app
 
     env:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
