@@ -2,8 +2,9 @@ name: Deploy to production (Vercel)
 
 on:
   push:
-    branches:
-      - main
+    # Pattern matched against refs/tags
+    tags:
+      - '*' # Push events to every tag not containing /
 
 jobs:
   deploy:
