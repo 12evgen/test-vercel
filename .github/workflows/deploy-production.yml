@@ -13,7 +13,7 @@ jobs:
 
     environment:
       name: production
-      url: https://test-vercel-seven-roan.vercel.app
+      url: https://test-vercel-production.vercel.app
 
     env:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
