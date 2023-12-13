@@ -38,7 +38,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        Fix
+        TAG
         <div className={styles.center}>
           <Image
             className={styles.logo}
