@@ -1,6 +1,6 @@
 {
   "name": "test-vercel",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "private": false,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
