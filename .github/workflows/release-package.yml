@@ -1,6 +1,7 @@
 name: Node.js Package
 
 on:
+  workflow_dispatch:
   release:
     types: [created]
 
@@ -9,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
       - run: npm ci
       - run: npm test
 
@@ -23,9 +24,9 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm publish
