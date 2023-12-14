@@ -21,6 +21,10 @@ jobs:
     permissions:
       packages: write
       contents: read
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
