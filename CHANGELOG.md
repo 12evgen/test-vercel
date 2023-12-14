@@ -1,3 +1,10 @@
+# [1.5.0](https://gh_personal/12evgen/test-vercel/compare/v1.4.0...v1.5.0) (2023-12-14)
+
+
+### Features
+
+* New tag ([4033ae4](https://gh_personal/12evgen/test-vercel/commit/4033ae4eb92abb74c611a6a68b3902651d529902))
+
 # [1.4.0](https://gh_personal/12evgen/test-vercel/compare/v1.3.0...v1.4.0) (2023-12-14)
 
 
