@@ -38,7 +38,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        New Package
+        New Github Package
         <div className={styles.center}>
           <Image
             className={styles.logo}
