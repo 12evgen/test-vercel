@@ -1,3 +1,10 @@
+# [1.9.0](https://gh_personal/12evgen/test-vercel/compare/v1.8.0...v1.9.0) (2023-12-14)
+
+
+### Features
+
+* new github package ([a07eb54](https://gh_personal/12evgen/test-vercel/commit/a07eb54fb16f28d26bcbd757f1cbffb22f7d8b79))
+
 # [1.8.0](https://gh_personal/12evgen/test-vercel/compare/v1.7.0...v1.8.0) (2023-12-14)
 
 
