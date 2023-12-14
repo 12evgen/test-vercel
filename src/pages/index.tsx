@@ -38,7 +38,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        TAG
+        New Release
         <div className={styles.center}>
           <Image
             className={styles.logo}
