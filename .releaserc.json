@@ -3,9 +3,6 @@
     "type": "git",
     "url": "https://github.com/12evgen/test-vercel.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "branches": [
     "main"
   ],

@@ -3,7 +3,7 @@
   "version": "1.8.0",
   "private": false,
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@12evgen:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "dev": "next dev",
