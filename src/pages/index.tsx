@@ -38,7 +38,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        New fdsfds
+        New fdsfds gfdg
         <div className={styles.center}>
           <Image
             className={styles.logo}
