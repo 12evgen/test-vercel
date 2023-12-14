@@ -2,9 +2,6 @@
   "name": "test-vercel",
   "version": "1.10.0",
   "private": false,
-  "publishConfig": {
-    "@12evgen:registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
