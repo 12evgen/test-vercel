@@ -19,6 +19,7 @@ jobs:
       url: https://test-vercel-production.vercel.app
 
     env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
