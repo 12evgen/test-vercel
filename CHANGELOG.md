@@ -1,3 +1,10 @@
+# [1.6.0](https://gh_personal/12evgen/test-vercel/compare/v1.5.0...v1.6.0) (2023-12-14)
+
+
+### Features
+
+* Add package ([fbfce7e](https://gh_personal/12evgen/test-vercel/commit/fbfce7e0ebcceb7d509f04ec960021cae87ab341))
+
 # [1.5.0](https://gh_personal/12evgen/test-vercel/compare/v1.4.0...v1.5.0) (2023-12-14)
 
 
