@@ -4,7 +4,7 @@
     "url": "https://github.com/12evgen/test-vercel.git"
   },
   "publishConfig": {
-    "access": "restricted"
+    "registry": "https://npm.pkg.github.com"
   },
   "branches": [
     "main"
