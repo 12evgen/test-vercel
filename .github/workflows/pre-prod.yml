@@ -11,7 +11,7 @@ on:
 jobs:
   frontend-build-and-deploy:
     environment:
-      name: Production
+      name: Development
       url: https://test-vercel-pre-production.vercel.app
     runs-on: ubuntu-latest
 
@@ -27,7 +27,7 @@ jobs:
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --yes --environment=development --token=${{ secrets.VERCEL_TOKEN }}
       - name: Build Project Artifacts
         run: vercel build --prod --token ${{ secrets.VERCEL_TOKEN }}
       - name: Deploy to Vercel and Alias Deployment
