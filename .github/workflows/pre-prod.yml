@@ -6,7 +6,7 @@ env:
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [pre-prod]
 
 jobs:
   frontend-build-and-deploy:
