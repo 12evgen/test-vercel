@@ -1,4 +1,4 @@
-is_prod=true
+is_prod=false
 
 while getopts t:a:b:d flag
 do

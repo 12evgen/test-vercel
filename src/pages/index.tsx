@@ -38,7 +38,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        Pre Production Production Production Production
+        WOWOWOWWOO
         <div className={styles.center}>
           <Image
             className={styles.logo}
