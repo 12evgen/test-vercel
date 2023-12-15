@@ -5,8 +5,6 @@ env:
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 jobs:
   frontend-build-and-deploy:
@@ -28,7 +26,5 @@ jobs:
         run: npm install --global vercel@latest
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-      - name: Build Project Artifacts
-        run: vercel build --prod --token ${{ secrets.VERCEL_TOKEN }}
-      - name: Deploy to Vercel and Alias Deployment
-        run: .github/workflows/deployDomain.sh -t ${{ secrets.VERCEL_TOKEN }} -a test-vercel-production.vercel.app
+      - name: Alias production
+        run: vercel alias set test-vercel-pre-production.vercel.app test-vercel-production.vercel.app --token ${{ secrets.VERCEL_TOKEN }}
