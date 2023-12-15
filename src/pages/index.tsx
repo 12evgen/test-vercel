@@ -38,7 +38,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        New Release
+        New Alias Deployment
         <div className={styles.center}>
           <Image
             className={styles.logo}
