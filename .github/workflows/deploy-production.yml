@@ -30,10 +30,10 @@ jobs:
         run: npm install --global vercel@latest
 
       - name: Pull Vercel project settings
-        run: vercel pull --environment=production --yes --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --environment=production --yes
 
       - name: Download build from GitHub Packages
         run: npm install react-virtuoso
 
       - name: Deploy project artifacts to Vercel
-        run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --build ./
+        run: vercel --prod ./ --token=${{ secrets.VERCEL_TOKEN }}
