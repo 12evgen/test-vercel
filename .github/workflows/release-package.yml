@@ -22,6 +22,9 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: '@12evgen'
       - run: npm ci
+      - run: |
+         echo "@12evgen:registry=https://npm.pkg.github.com" >> .npmrc
+         echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHAB_TOKEN_NEW }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
