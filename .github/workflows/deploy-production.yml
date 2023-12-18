@@ -35,5 +35,8 @@ jobs:
       - name: Download build from GitHub Packages
         run: npm pack react-virtuoso
 
+      - name: Unpack build archive
+        run: tar -xf react-virtuoso-*.tgz
+
       - name: Deploy project artifacts to Vercel
-        run: vercel --prod ./react-virtuoso-*.tgz --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod ./package --token=${{ secrets.VERCEL_TOKEN }}
