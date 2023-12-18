@@ -1,3 +1,10 @@
+# [1.12.0](https://gh_personal/12evgen/test-vercel/compare/v1.11.0...v1.12.0) (2023-12-18)
+
+
+### Features
+
+* Alias Deployment ([63aa8e1](https://gh_personal/12evgen/test-vercel/commit/63aa8e1be7318261e10e893d2492e16d64e2011e))
+
 # [1.11.0](https://gh_personal/12evgen/test-vercel/compare/v1.10.0...v1.11.0) (2023-12-14)
 
 
