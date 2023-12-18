@@ -1,16 +1,18 @@
-name: Production
+name: Deploy to pre production
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 on:
   workflow_dispatch:
+  push:
+    branches: [pre-prod]
 
 jobs:
   frontend-build-and-deploy:
     environment:
-      name: Production
-      url: https://test-vercel-production.vercel.app
+      name: Development
+      url: https://test-vercel-pre-production.vercel.app
     runs-on: ubuntu-latest
 
     steps:
@@ -25,6 +27,8 @@ jobs:
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-      - name: Alias production
-        run: vercel alias set test-vercel-pre-production.vercel.app test-vercel-production.vercel.app --token ${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --yes --environment=development --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy to Vercel and Alias Deployment
+        run: .github/workflows/deployDomain.sh -t ${{ secrets.VERCEL_TOKEN }} -a test-vercel-pre-production.vercel.app

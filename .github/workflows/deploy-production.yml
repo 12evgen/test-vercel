@@ -1,14 +1,7 @@
-name: Deploy to production (Vercel)
+name: Deploy to production
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - '[0-9]+.[0-9]+.[0-9]+'
-      # https://semver.org/ proper release tags, more or less
-      - 'v[0-9]+.[0-9]+.[0-9]+'
-      # prerelease tags, more or less
-      - 'v[0-9]+.[0-9]+.[0-9]+-*'
 
 jobs:
   deploy:
@@ -36,15 +29,11 @@ jobs:
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Pull Vercel project settings
+        run: vercel pull --environment=production --yes --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Build Project Artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy project artifacts to Vercel
-        run: vercel deploy --prebuilt --archive=tgz --token=${{ secrets.VERCEL_TOKEN }} >$GITHUB_OUTPUT
-        id: vercel-deploy
-
-      - name: Assign staging domain
-        run: echo ${{ steps.vercel-deploy.outputs }}
+        run: vercel deploy --prebuilt --prod --archive=tgz --token=${{ secrets.VERCEL_TOKEN }}
