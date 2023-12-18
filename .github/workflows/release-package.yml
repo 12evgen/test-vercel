@@ -23,8 +23,8 @@ jobs:
           scope: '@12evgen'
       - run: npm ci
       - run: |
+         echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
          echo "@12evgen:registry=https://npm.pkg.github.com" >> .npmrc
-         echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
