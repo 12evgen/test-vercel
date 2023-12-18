@@ -21,7 +21,7 @@ jobs:
           scope: '@12evgen'
       - name: npmrc
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc   
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc   
           echo "@12evgen:registry=https://npm.pkg.github.com/" >> .npmrc
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
