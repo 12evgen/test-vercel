@@ -46,6 +46,4 @@ jobs:
 
       - name: Assign domains
         run: |
-          vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} amatechs.net --token=${{ secrets.VERCEL_TOKEN }} 
-          vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} nj.amatechs.net --token=${{ secrets.VERCEL_TOKEN }} 
-          vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} mx.amatechs.net --token=${{ secrets.VERCEL_TOKEN }} 
+          vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} test-vercel-stage.vercel.app --token=${{ secrets.VERCEL_TOKEN }} 
