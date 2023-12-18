@@ -10,6 +10,9 @@
     "release": "npm run with-env -- semantic-release --no-ci",
     "with-env": "env-cmd --file .env.local --fallback --no-override --expand-envs"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "dependencies": {
     "next": "14.0.4",
     "react": "^18",
