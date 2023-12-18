@@ -41,8 +41,8 @@ jobs:
       - name: Deploy project artifacts to Vercel
         id: vercel-deploy
         run: |
-          deploymentUrl=$(vercel deploy --prebuilt --archive=tgz --token=${{ secrets.VERCEL_TOKEN }}
-          echo "deployment-url=$deploymentUrl" >> $GITHUB_OUTPUT  
+          deploymentUrl=$(vercel deploy --prebuilt --archive=tgz --token=${{ secrets.VERCEL_TOKEN }})
+          echo "deployment-url=$deploymentUrl" >> $GITHUB_OUTPUT
 
       - name: Assign domains
         run: |
