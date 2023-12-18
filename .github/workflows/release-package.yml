@@ -23,7 +23,7 @@ jobs:
           scope: '@12evgen'
       - run: npm ci
       - run: |
-         echo "@12evgen:registry=https://npm.pkg.github.com" >> .npmrc
+         echo "@12evgen/test-vercel:registry=https://npm.pkg.github.com" >> .npmrc
          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
       - run: npm publish
         env:
