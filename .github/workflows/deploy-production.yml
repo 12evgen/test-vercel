@@ -33,9 +33,7 @@ jobs:
         run: vercel pull --environment=production --yes --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Download build from GitHub Packages
-        run: npm install @12evgen/test-vercel@1.35.0 --registry=https://npm.pkg.github.com
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm install react-virtuoso
 
       - name: Deploy project artifacts to Vercel
         run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --build ./
