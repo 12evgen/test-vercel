@@ -30,7 +30,7 @@ jobs:
         run: npm install --global vercel@latest
 
       - name: Pull Vercel project settings
-        run: vercel pull --environment=production --yes
+        run: vercel pull --environment=production --yes --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Download build from GitHub Packages
         run: npm install react-virtuoso
