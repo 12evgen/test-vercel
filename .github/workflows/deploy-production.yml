@@ -32,8 +32,10 @@ jobs:
       - name: Pull Vercel project settings
         run: vercel pull --environment=production --yes --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Build Project Artifacts
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Download build from GitHub Packages
+        run: npm install @12evgen/test-vercel@1.35.0 --registry=https://npm.pkg.github.com
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy project artifacts to Vercel
-        run: vercel deploy --prebuilt --prod --archive=tgz --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --build ./
