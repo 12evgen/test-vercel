@@ -36,4 +36,4 @@ jobs:
         run: npm pack react-virtuoso
 
       - name: Deploy project artifacts to Vercel
-        run: vercel --prod ./node_modules/react-virtuoso --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod ./react-virtuoso-*.tgz --token=${{ secrets.VERCEL_TOKEN }}
