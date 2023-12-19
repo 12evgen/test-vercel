@@ -19,6 +19,13 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
           scope: '@12evgen'
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel project settings
+        run: vercel pull --environment=production --yes --token=${{ secrets.VERCEL_TOKEN }}
+
       - name: npmrc
         run: |
           echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc   
@@ -37,10 +44,12 @@ jobs:
             echo "skipping publish, package @12evgen/test-vercel@${VERSION} already published"
             echo "::set-output name=alreadyPublished::true"
           fi
-      - run: npm ci
-      - name: Build
+
+      - name: Build Project Artifacts
         if: steps.publish.outputs.alreadyPublished == 'false'
-        run: npm run build
+        run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
+      - name: Create .npmrc file
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .vercel/.npmrc
       - name: Publish
         if: steps.publish.outputs.alreadyPublished == 'false'
-        run: npm publish --access public
+        run: npm publish .vercel --access public
