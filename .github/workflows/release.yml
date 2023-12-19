@@ -25,7 +25,7 @@ jobs:
       run: npm run build
 
     - name: Run semantic-release
-      run: npx semantic-release
+      run: npm run release
 
     - name: Upload artifacts to GitHub Releases
       uses: actions/upload-artifact@v4
