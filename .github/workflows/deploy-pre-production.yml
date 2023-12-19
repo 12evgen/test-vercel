@@ -34,7 +34,7 @@ jobs:
 
       - name: Unpack build archive
         run: |
-          unzip 1.28.0.zip
+          mkdir build && unzip 1.28.0.zip
           ls -R
 
       - name: List Files
