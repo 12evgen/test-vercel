@@ -34,7 +34,7 @@ jobs:
 
       - name: npmrc
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc   
+          echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >> .npmrc   
           echo "@12evgen:registry=https://npm.pkg.github.com/" >> .npmrc
 
       - name: Download build from GitHub Packages
