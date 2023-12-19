@@ -35,4 +35,4 @@ jobs:
           ls -R
 
       - name: Deploy project artifacts to Vercel
-        run: vercel --prod --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prod --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
