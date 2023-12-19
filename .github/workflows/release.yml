@@ -41,8 +41,8 @@ jobs:
     - name: Create Release Asset
       run: |
         cd .next
-        zip -r theme.zip .
-        mv theme.zip ../theme.zip
+        zip -r ${{ steps.semantic.outputs.new_release_version }}.tgz
+        mv ${{ steps.semantic.outputs.new_release_version }}.tgz ../${{ steps.semantic.outputs.new_release_version }}.tgz
     - name: List Files
       run: ls -R
     - name: Upload Release Asset
