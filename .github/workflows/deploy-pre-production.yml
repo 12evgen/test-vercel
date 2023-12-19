@@ -39,4 +39,4 @@ jobs:
         run: ls -R
 
       - name: Deploy project artifacts to Vercel
-        run: vercel --prod ./package --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod ./build --token=${{ secrets.VERCEL_TOKEN }}
