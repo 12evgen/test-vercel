@@ -25,7 +25,9 @@ jobs:
       run: npm run build
 
     - name: Run semantic-release
-      run: npm run release
+      run: npx semantic-release
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload artifacts to GitHub Releases
       uses: actions/upload-artifact@v4
