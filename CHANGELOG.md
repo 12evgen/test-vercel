@@ -1,3 +1,10 @@
+# [1.15.0](https://gh_personal/12evgen/test-vercel/compare/v1.14.0...v1.15.0) (2023-12-19)
+
+
+### Features
+
+* new version 2 ([0ea80fd](https://gh_personal/12evgen/test-vercel/commit/0ea80fde02aadb33ced96bb991a4ac60161c1056))
+
 # [1.14.0](https://gh_personal/12evgen/test-vercel/compare/v1.13.0...v1.14.0) (2023-12-19)
 
 
