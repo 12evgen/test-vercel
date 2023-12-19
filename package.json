@@ -11,13 +11,6 @@
     "release": "npm run with-env -- semantic-release --no-ci",
     "with-env": "env-cmd --file .env.local --fallback --no-override --expand-envs"
   },
-  "publishConfig": {
-    "@12evgen:registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:12evgen/test-vercel.git"
-  },
   "dependencies": {
     "next": "14.0.4",
     "react": "^18",
