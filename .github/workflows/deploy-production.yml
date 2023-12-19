@@ -28,8 +28,9 @@ jobs:
 
       - name: Download Build Artifacts
         uses: actions/download-artifact@v4
-        with:
-          name: v1.12.0
+
+      - name: List Files
+        run: ls -R
 
       - name: Unpack build archive
         run: tar -xf test-vercel-*.tgz
