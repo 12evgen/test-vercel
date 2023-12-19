@@ -1,3 +1,18 @@
+# [1.29.0](https://github.com/12evgen/test-vercel/compare/v1.28.0...v1.29.0) (2023-12-19)
+
+
+### Features
+
+* pre prod 10 ([d230fd0](https://github.com/12evgen/test-vercel/commit/d230fd0748086103c8b6552ffbbf51afe24f64d2))
+* pre prod 11 ([6318093](https://github.com/12evgen/test-vercel/commit/631809325398e0910513254f5247ef255527ce0d))
+* pre prod 12 ([b7bd971](https://github.com/12evgen/test-vercel/commit/b7bd9712f386aa0e34b298c67498a05cd79344ea))
+* pre prod 3 ([c23415d](https://github.com/12evgen/test-vercel/commit/c23415dbbbdcb7e0a958d68300183362f1d554aa))
+* pre prod 4 ([98ba9df](https://github.com/12evgen/test-vercel/commit/98ba9df986568607c47bd7cd45248f45362082b7))
+* pre prod 5 ([be2d5e2](https://github.com/12evgen/test-vercel/commit/be2d5e244a3c986b2f414455791f0333d39d242b))
+* pre prod 6 ([569043f](https://github.com/12evgen/test-vercel/commit/569043f011838ca630cd1c5804b761086c40d1aa))
+* pre prod 7 ([4ec3d9e](https://github.com/12evgen/test-vercel/commit/4ec3d9e668d196bd9c8106ca955bc369ef0ae07a))
+* pre prod 8 ([2cedec2](https://github.com/12evgen/test-vercel/commit/2cedec281655951a0fc9b6588c87ccb926dd8fbd))
+
 # [1.28.0](https://github.com/12evgen/test-vercel/compare/v1.27.0...v1.28.0) (2023-12-19)
 
 
