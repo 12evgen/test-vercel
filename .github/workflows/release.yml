@@ -8,6 +8,10 @@ jobs:
   build-project:
     name: Build Next.js project
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
