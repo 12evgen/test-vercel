@@ -33,7 +33,9 @@ jobs:
         run: ls -R
 
       - name: Unpack build archive
-        run: unzip 1.28.0.zip .vercel
+        run: |
+          unzip 1.28.0.zip
+          ls -R
 
       - name: List Files
         run: ls -R
