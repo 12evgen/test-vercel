@@ -27,13 +27,13 @@ jobs:
         uses: robinraju/release-downloader@v1.8
         with:
           latest: true
-          fileName: "1.24.0.zip"
+          fileName: "1.27.0.zip"
 
       - name: List Files
         run: ls -R
 
       - name: Unpack build archive
-        run: unzip 1.24.0.zip
+        run: unzip 1.27.0.zip
 
       - name: List Files
         run: ls -R
