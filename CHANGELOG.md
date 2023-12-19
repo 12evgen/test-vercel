@@ -9,6 +9,28 @@
 
 ### Features
 
+* new ([7d04536](https://github.com/12evgen/test-vercel/commit/7d04536fb7594684a4f7337380608f8d4810b852))
+* new version 12 ([62b57f1](https://github.com/12evgen/test-vercel/commit/62b57f13fb727bbab59db51303e972a49c75d3a0))
+* new version 13 ([6f1b2b8](https://github.com/12evgen/test-vercel/commit/6f1b2b823a9a2ec7819a7e9b78978708e359e178))
+* new version 14 ([37d8cb1](https://github.com/12evgen/test-vercel/commit/37d8cb11d04d88e5c42e58280d315e7c40227df4))
+* new version 15 ([2dc35e5](https://github.com/12evgen/test-vercel/commit/2dc35e5f357bbca7be42b35ba283765e6f8690b9))
+* new version 16 ([198ebb9](https://github.com/12evgen/test-vercel/commit/198ebb92f9ff7db22f927450e77addd1895dc6b6))
+* new version 17 ([1603a4c](https://github.com/12evgen/test-vercel/commit/1603a4caa94a4b1b8e6d3d3bd9745096c164dd86))
+* new1 ([3784556](https://github.com/12evgen/test-vercel/commit/3784556948b3d7e0cf61b0fc2589f4d24dc05592))
+* new2 ([81ae5bf](https://github.com/12evgen/test-vercel/commit/81ae5bf7defb7a8034aeb42290f4c69a5a18c2bc))
+* new3 ([9b1fae9](https://github.com/12evgen/test-vercel/commit/9b1fae902d4364453c4db41aad2b885daad79f19))
+
+# [1.20.0](https://github.com/12evgen/test-vercel/compare/v1.19.0...v1.20.0) (2023-12-19)
+
+
+### Bug Fixes
+
+* new version 1 ([1bf8c34](https://github.com/12evgen/test-vercel/commit/1bf8c340915d37516cc439634e3236c83d85f424))
+* new version 2 ([be42b2e](https://github.com/12evgen/test-vercel/commit/be42b2e935fb3d9aa6c025b06b1944ca5a4dd7c3))
+
+
+### Features
+
 * new version 12 ([62b57f1](https://github.com/12evgen/test-vercel/commit/62b57f13fb727bbab59db51303e972a49c75d3a0))
 * new version 13 ([6f1b2b8](https://github.com/12evgen/test-vercel/commit/6f1b2b823a9a2ec7819a7e9b78978708e359e178))
 * new version 14 ([37d8cb1](https://github.com/12evgen/test-vercel/commit/37d8cb11d04d88e5c42e58280d315e7c40227df4))
