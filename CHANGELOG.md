@@ -1,3 +1,10 @@
+# [1.27.0](https://github.com/12evgen/test-vercel/compare/v1.26.0...v1.27.0) (2023-12-19)
+
+
+### Features
+
+* test 16 ([e6a0c9b](https://github.com/12evgen/test-vercel/commit/e6a0c9bdaff8b5c7fa89f597155c23b279fb3e47))
+
 # [1.26.0](https://github.com/12evgen/test-vercel/compare/v1.25.0...v1.26.0) (2023-12-19)
 
 
