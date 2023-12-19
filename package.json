@@ -1,1 +1,36 @@
-{"type": "commonjs"}
+{
+  "name": "@12evgen/test-vercel",
+  "version": "1.57.0",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "release": "npm run with-env -- semantic-release --no-ci",
+    "with-env": "env-cmd --file .env.local --fallback --no-override --expand-envs"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:12evgen/test-vercel.git"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "env-cmd": "~10.1.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "semantic-release": "^22.0.12",
+    "typescript": "^5"
+  }
+}
