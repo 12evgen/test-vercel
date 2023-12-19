@@ -23,8 +23,17 @@ jobs:
         with:
           node-version: 18
 
+      - name: Download asset from a specific release version
+        uses: robinraju/release-downloader@v1.8
+        with:
+          latest: true
+          fileName: "1.24.0.zip"
+
+      - name: List Files
+        run: ls -R
+
       - name: Unpack build archive
-        run: tar -xf https://github.com/12evgen/test-vercel/releases/download/v1.12.0/test-vercel.tgz
+        run: tar -xf 1.24.0.zip
 
       - name: Deploy project artifacts to Vercel
         run: vercel --prod ./package --token=${{ secrets.VERCEL_TOKEN }}
