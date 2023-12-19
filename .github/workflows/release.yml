@@ -38,6 +38,8 @@ jobs:
         prerelease: ${{ !!steps.semantic.outputs.new_release_channel}} # on everything but the default channel
     - name: Build project assets
       run: npm run build
+    - name: List Files
+      run: ls -R
     - name: Upload Release Asset
       if: steps.semantic.outputs.new_release_published == 'true'
       id: upload-release-asset
