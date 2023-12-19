@@ -41,7 +41,7 @@ jobs:
         run: npm pack @12evgen/test-vercel@1.35.0 --registry=https://npm.pkg.github.com
 
       - name: Unpack build archive
-        run: tar -xf @12evgen/test-vercel-*.tgz
+        run: tar -xf 12evgen-test-vercel-*.tgz
 
       - name: Deploy project artifacts to Vercel
         run: vercel --prod ./package --token=${{ secrets.VERCEL_TOKEN }}
