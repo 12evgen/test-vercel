@@ -28,6 +28,10 @@ jobs:
     name: Distribute Next.js project to GitHub Releases
     runs-on: ubuntu-latest
     needs: build-project
+
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
