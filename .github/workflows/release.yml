@@ -48,7 +48,7 @@ jobs:
 
     - name: Build project assets
       run: |
-        vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
         zip ${{ steps.semantic.outputs.new_release_version }}.zip .vercel -r
 
     - name: Upload Release Asset

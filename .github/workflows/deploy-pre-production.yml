@@ -27,11 +27,11 @@ jobs:
         uses: robinraju/release-downloader@v1.8
         with:
           latest: true
-          fileName: "1.28.0.zip"
+          fileName: "1.29.0.zip"
 
       - name: Unpack build archive
         run: |
-          unzip 1.28.0.zip
+          unzip 1.29.0.zip
           ls -R
 
       - name: Deploy project artifacts to Vercel
