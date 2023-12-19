@@ -34,8 +34,10 @@ jobs:
         with:
           filename: site.zip
       - name: Create GitHub release
-        uses: cycjimmy/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v4
         id: semantic
+        with:
+          semantic_version: 22
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Release
