@@ -27,16 +27,16 @@ jobs:
         uses: robinraju/release-downloader@v1.8
         with:
           latest: true
-          fileName: "1.27.0.zip"
+          fileName: "1.28.0.zip"
 
       - name: List Files
         run: ls -R
 
       - name: Unpack build archive
-        run: unzip 1.27.0.zip
+        run: unzip 1.28.0.zip
 
       - name: List Files
         run: ls -R
 
       - name: Deploy project artifacts to Vercel
-        run: vercel --prod --prebuilt .next --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod --prebuilt .vercel --token=${{ secrets.VERCEL_TOKEN }}
