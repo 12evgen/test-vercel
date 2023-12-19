@@ -38,6 +38,11 @@ jobs:
         prerelease: ${{ !!steps.semantic.outputs.new_release_channel}} # on everything but the default channel
     - name: Build project assets
       run: npm run build
+    - name: Create Release Asset
+      run: |
+        cd .next
+        zip -r theme.zip .
+        mv theme.zip ../theme.zip
     - name: List Files
       run: ls -R
     - name: Upload Release Asset
