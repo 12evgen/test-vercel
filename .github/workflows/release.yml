@@ -37,12 +37,10 @@ jobs:
         draft: false
         prerelease: ${{ !!steps.semantic.outputs.new_release_channel}} # on everything but the default channel
     - name: Build project assets
-      run: npm run build
-    - name: Create Release Asset
-      run: |
-        cd .next
-        zip -r ${{ steps.semantic.outputs.new_release_version }}.tgz
-        mv ${{ steps.semantic.outputs.new_release_version }}.tgz ../${{ steps.semantic.outputs.new_release_version }}.tgz
+      run: | 
+        npm run build
+        mv .next/ build
+        zip ${{ steps.semantic.outputs.new_release_version }}.zip build -r
     - name: List Files
       run: ls -R
     - name: Upload Release Asset
@@ -53,6 +51,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./${{ steps.semantic.outputs.new_release_version }}.tgz
-        asset_name: ${{ steps.semantic.outputs.new_release_version }}.tgz
+        asset_path: ./${{ steps.semantic.outputs.new_release_version }}.zip
+        asset_name: ${{ steps.semantic.outputs.new_release_version }}.zip
         asset_content_type: application/gzip
