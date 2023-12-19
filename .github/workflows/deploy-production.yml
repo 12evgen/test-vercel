@@ -27,7 +27,10 @@ jobs:
           node-version: 18
 
       - name: Unpack build archive
-        run: tar -xf https://github.com/12evgen/test-vercel/releases/download/v1.12.0/test-vercel.tgz
+        run: tar -xf https://github.com/12evgen/test-vercel/releases/download/v1.24.0/1.24.0.zip
+
+      - name: List Files
+        run: ls -R
 
       - name: Deploy project artifacts to Vercel
         run: vercel --prod ./package --token=${{ secrets.VERCEL_TOKEN }}

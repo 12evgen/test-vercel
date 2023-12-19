@@ -1,34 +1,30 @@
 name: Deploy to pre production
+
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 on:
   workflow_dispatch:
-  push:
-    branches: [pre-prod]
 
 jobs:
-  frontend-build-and-deploy:
+  deploy:
     environment:
-      name: Development
+      name: production
       url: https://test-vercel-pre-production.vercel.app
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
+
       - name: Setup Node.js v18
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: Install Vercel CLI
-        run: npm install --global vercel@latest
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=development --token=${{ secrets.VERCEL_TOKEN }}
-      - name: Build Project Artifacts
-        run: vercel build --token ${{ secrets.VERCEL_TOKEN }}
-      - name: Deploy to Vercel and Alias Deployment
-        run: .github/workflows/deployDomain.sh -t ${{ secrets.VERCEL_TOKEN }} -a test-vercel-pre-production.vercel.app
+
+      - name: Unpack build archive
+        run: tar -xf https://github.com/12evgen/test-vercel/releases/download/v1.12.0/test-vercel.tgz
+
+      - name: Deploy project artifacts to Vercel
+        run: vercel --prod ./package --token=${{ secrets.VERCEL_TOKEN }}
