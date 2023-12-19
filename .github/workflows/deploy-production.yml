@@ -26,20 +26,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: Download asset from a specific release version
-        uses: robinraju/release-downloader@v1.8
-        with:
-          latest: true
-          fileName: "1.24.0.zip"
-
-      - name: List Files
-        run: ls -R
-
-      - name: Unpack build archive
-        run: tar -xf 1.24.0.zip
-
-      - name: List Files
-        run: ls -R
-
-      - name: Deploy project artifacts to Vercel
-        run: vercel --prod ./package --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Assign domains
+        run: |
+          vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} amatechs.net --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ env.VERCEL_SCOPE }}
