@@ -1,6 +1,6 @@
 {
   "name": "@12evgen/test-vercel",
-  "version": "1.46.0",
+  "version": "1.47.0",
   "private": false,
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "release": "npm run with-env -- semantic-release --no-ci",
-    "with-env": "env-cmd --file .env.local --fallback --no-override --expand-envs"
+    "with-env": "env-cmd --file .env --fallback --no-override --expand-envs"
   },
   "dependencies": {
     "next": "14.0.4",
