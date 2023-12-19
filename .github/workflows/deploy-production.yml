@@ -32,6 +32,11 @@ jobs:
       - name: Pull Vercel project settings
         run: vercel pull --environment=production --yes --token=${{ secrets.VERCEL_TOKEN }}
 
+      - name: npmrc
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc   
+          echo "@12evgen:registry=https://npm.pkg.github.com/" >> .npmrc
+
       - name: Download build from GitHub Packages
         run: npm pack @12evgen/test-vercel@1.35.0 --registry=https://npm.pkg.github.com
 
