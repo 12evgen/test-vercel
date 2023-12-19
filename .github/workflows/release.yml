@@ -34,13 +34,22 @@ jobs:
         with:
           filename: site.zip
       - name: Create GitHub release
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Release
+        if: steps.semantic.outputs.new_release_published == 'true'
         id: create-new-release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
+          tag_name: v${{ steps.semantic.outputs.new_release_version }}
+          release_name: v${{ steps.semantic.outputs.new_release_version }}
+          body: ${{ steps.semantic.outputs.new_release_notes }}
+          draft: false
+          prerelease: ${{ !!steps.semantic.outputs.new_release_channel}}
       - name: Upload asset to GitHub release
         uses: actions/upload-release-asset@v1
         env:
