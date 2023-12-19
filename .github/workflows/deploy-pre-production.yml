@@ -33,7 +33,7 @@ jobs:
         run: ls -R
 
       - name: Unpack build archive
-        run: unzip 1.24.0.zip next -r
+        run: unzip 1.24.0.zip
 
       - name: List Files
         run: ls -R
