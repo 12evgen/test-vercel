@@ -38,7 +38,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        New version 4
+        New version 444
         <div className={styles.center}>
           <Image
             className={styles.logo}
