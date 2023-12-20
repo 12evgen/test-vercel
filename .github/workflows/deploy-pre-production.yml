@@ -6,6 +6,10 @@ env:
 
 on:
   workflow_dispatch:
+    versionBuild:
+      description: 'Version'
+      required: true
+      default: 'latest'
 
 jobs:
   deploy:
@@ -27,10 +31,10 @@ jobs:
         uses: robinraju/release-downloader@v1.8
         with:
           latest: true
-          fileName: "1.29.0.zip"
+          fileName: ${{ github.event.inputs.versionBuild }}.zip
 
       - name: Unpack build archive
-        run: unzip 1.29.0.zip
+        run: unzip ${{ github.event.inputs.versionBuild }}.zip
 
       - name: Deploy project artifacts to Vercel
         id: vercel-deploy
