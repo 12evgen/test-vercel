@@ -37,6 +37,9 @@ jobs:
       - name: Unpack build archive
         run: unzip ${{ github.event.inputs.versionBuild }}.zip
 
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
       - name: Deploy project artifacts to Vercel
         id: vercel-deploy
         run: |
