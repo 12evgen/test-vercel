@@ -6,10 +6,11 @@ env:
 
 on:
   workflow_dispatch:
-    versionBuild:
-      description: 'Version'
-      required: true
-      default: 'latest'
+    inputs:
+      versionBuild:
+        description: 'Version'
+        required: true
+        default: 'latest'
 
 jobs:
   deploy:
