@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "commitlint": "commitlint --edit"
   },
   "dependencies": {
     "@commitlint/cli": "^18.4.3",
@@ -23,6 +24,7 @@
     "env-cmd": "~10.1.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "husky": "^8.0.3",
     "typescript": "^5"
   }
 }
