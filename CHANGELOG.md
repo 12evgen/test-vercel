@@ -5,6 +5,13 @@
 
 * New version 2 ([025f49c](https://github.com/12evgen/test-vercel/commit/025f49cb68fd8e54139096b02efd18de824668b7))
 
+# [1.32.0](https://github.com/12evgen/test-vercel/compare/v1.31.0...v1.32.0) (2023-12-20)
+
+
+### Features
+
+* New version 2 ([025f49c](https://github.com/12evgen/test-vercel/commit/025f49cb68fd8e54139096b02efd18de824668b7))
+
 # [1.31.0](https://github.com/12evgen/test-vercel/compare/v1.30.0...v1.31.0) (2023-12-20)
 
 
