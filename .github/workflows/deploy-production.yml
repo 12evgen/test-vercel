@@ -28,4 +28,4 @@ jobs:
 
       - name: Assign domains
         run: |
-          vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} amatechs.net --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ env.VERCEL_SCOPE }}
+          vercel alias set https://test-vercel-pre-production.vercel.app https://test-vercel-production.vercel.app --token=${{ secrets.VERCEL_TOKEN }} 

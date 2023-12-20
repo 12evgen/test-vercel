@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     environment:
-      name: production
+      name: pre-production
       url: https://test-vercel-pre-production.vercel.app
     runs-on: ubuntu-latest
 
@@ -30,9 +30,13 @@ jobs:
           fileName: "1.29.0.zip"
 
       - name: Unpack build archive
-        run: |
-          unzip 1.29.0.zip
-          ls -R
+        run: unzip 1.29.0.zip
 
       - name: Deploy project artifacts to Vercel
-        run: vercel deploy --prod --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        id: vercel-deploy
+        run: |
+          deploymentUrl=$(vercel deploy ---prod -prebuilt --archive=tgz --token=${{ secrets.VERCEL_TOKEN }})
+          echo "deployment-url=$deploymentUrl" >> $GITHUB_OUTPUT
+
+      - name: Assign domains
+        run: vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} test-vercel-pre-production.vercel.app --token=${{ secrets.VERCEL_TOKEN }}
