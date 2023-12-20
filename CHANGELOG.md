@@ -1,3 +1,17 @@
+# [1.30.0](https://github.com/12evgen/test-vercel/compare/v1.29.0...v1.30.0) (2023-12-20)
+
+
+### Features
+
+* revert staging ([caa89d5](https://github.com/12evgen/test-vercel/commit/caa89d581c7cf838453798375bfedf5f3aa766ef))
+* revert staging 2 ([2b9659e](https://github.com/12evgen/test-vercel/commit/2b9659e5e0f8ac6cfc7b4291e88371cb8ee68e32))
+* test ([f42d05d](https://github.com/12evgen/test-vercel/commit/f42d05daeabedff605d34a54075b38d5ea15ccb0))
+* test 2 ([9b851bc](https://github.com/12evgen/test-vercel/commit/9b851bc2b7f1871f13ae9d11bece90332356abc5))
+* test 3 ([a4d1da6](https://github.com/12evgen/test-vercel/commit/a4d1da680e7799cd9b070b8179b0fee478eb0879))
+* test 4 ([eba676b](https://github.com/12evgen/test-vercel/commit/eba676b4b79ddb3b316e95ba360fdf31a37c2146))
+* test 5 ([12933b5](https://github.com/12evgen/test-vercel/commit/12933b5ec882d2e9f1d705a2ddfd34ef284e29fb))
+* test staging ([23c18ad](https://github.com/12evgen/test-vercel/commit/23c18ad8214f7a1c99027db7b1556fd72a5f4172))
+
 # [1.29.0](https://github.com/12evgen/test-vercel/compare/v1.28.0...v1.29.0) (2023-12-19)
 
 
