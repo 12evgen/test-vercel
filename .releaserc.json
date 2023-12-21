@@ -13,7 +13,8 @@
     [
       "@semantic-release/npm",
       {
-        "npmPublish": true
+        "npmPublish": true,
+        "tarballDir": ".vercel"
       }
     ],
     [
@@ -24,6 +25,12 @@
           "package-lock.json",
           "CHANGELOG.md"
         ]
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": ".vercel/*.tgz"
       }
     ]
   ]
