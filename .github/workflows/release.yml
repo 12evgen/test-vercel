@@ -39,6 +39,9 @@ jobs:
         vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
         zip ${{ steps.semantic.outputs.new_release_version }}.zip .vercel -r  
 
+    - name: List Files
+      run: ls -R
+
     - name: Release
       id: semantic
       env:
