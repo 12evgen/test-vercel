@@ -41,8 +41,6 @@ jobs:
         vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
         zip build.zip .vercel -r  
 
-    - name: Generate package.json
-
     - name: Release
       id: semantic
       env:
