@@ -4,6 +4,7 @@ on: [push, pull_request]
 
 jobs:
   commitlint:
+    name: Ensure messages conform to Conventional Commits standard
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -11,8 +12,7 @@ jobs:
           fetch-depth: 0
       - name: Install required dependencies
         run: |
-          apt update
-          apt install -y sudo
+          sudo apt update
           sudo apt install -y git curl
           curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
           sudo DEBIAN_FRONTEND=noninteractive apt install -y nodejs
