@@ -1,3 +1,14 @@
+# [1.35.0](https://github.com/12evgen/test-vercel/compare/v1.34.0...v1.35.0) (2023-12-21)
+
+
+### Features
+
+* Add commitlint ([219fd0f](https://github.com/12evgen/test-vercel/commit/219fd0f364b9b0e3605563217ff262ba11fd7e8b))
+* test ([742edd6](https://github.com/12evgen/test-vercel/commit/742edd69c80e26fc5990a8858d3d2b3ac5c0f78a))
+* test commit ([b0319fa](https://github.com/12evgen/test-vercel/commit/b0319fa9b50b736138a4ac72071913f9b02a89b2))
+* test1 ([0e8c7ef](https://github.com/12evgen/test-vercel/commit/0e8c7ef4962542c8258f429c4c37d79aa5f33f7c))
+* test2 ([f177ca7](https://github.com/12evgen/test-vercel/commit/f177ca7d80ca2f6051221c0e3c06557d8cb295b5))
+
 # [1.34.0](https://github.com/12evgen/test-vercel/compare/v1.33.0...v1.34.0) (2023-12-20)
 
 
