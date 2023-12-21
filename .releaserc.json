@@ -13,25 +13,9 @@
     [
       "@semantic-release/npm",
       {
-        "npmPublish": false,
-        "pkgRoot": ".vercel"
+        "npmPublish": false
       }
     ],
-    [
-      "@semantic-release/git",
-      {
-        "assets": [
-          "package.json",
-          "package-lock.json",
-          "CHANGELOG.md"
-        ]
-      }
-    ],
-    [
-      "@semantic-release/github",
-      {
-        "assets": "*.tgz"
-      }
-    ]
+    "@semantic-release/git"
   ]
 }
