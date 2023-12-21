@@ -1,3 +1,12 @@
+# [1.37.0](https://github.com/12evgen/test-vercel/compare/v1.36.0...v1.37.0) (2023-12-21)
+
+
+### Features
+
+* test release 2 ([05f7e3f](https://github.com/12evgen/test-vercel/commit/05f7e3f3dbf9479c1a38a857a08220604e77ccfd))
+* test release 3 ([52c617c](https://github.com/12evgen/test-vercel/commit/52c617c8a111fd86656e29c5c28f072a5e5fdf29))
+* test release 4 ([cec7661](https://github.com/12evgen/test-vercel/commit/cec7661e6af89760d283373259f015c4749fea2a))
+
 # [1.36.0](https://github.com/12evgen/test-vercel/compare/v1.35.0...v1.36.0) (2023-12-21)
 
 
