@@ -34,7 +34,7 @@ jobs:
       id: semantic
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_NEW_TOKEN }}
-      run: npx semantic-release --branches main
+      run: npx semantic-release
 
     - name: Gets latest created release info
       id: latest_release_info
