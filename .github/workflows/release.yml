@@ -25,22 +25,10 @@ jobs:
         node-version: 18
 
     - name: Install dependencies
-      run: npm clean-install
+      run: npm ci
 
     - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
       run: npm audit signatures
-
-    - name: Release
-      id: semantic
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
-      run: npx semantic-release
-
-    - name: Gets latest created release info
-      id: latest_release_info
-      uses: jossef/action-latest-release-info@v1.2.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Install Vercel CLI
       run: npm install --global vercel@latest
@@ -51,14 +39,13 @@ jobs:
     - name: Build project assets
       run: |
         vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-        zip ${{ steps.latest_release_info.outputs.tag_name }}.zip .vercel -r  
+        zip build.zip .vercel -r  
 
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
+    - name: Generate package.json
+
+    - name: Release
+      id: semantic
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.latest_release_info.outputs.upload_url }}
-        asset_path: ./${{ steps.latest_release_info.outputs.tag_name }}.zip
-        asset_name: ${{ steps.latest_release_info.outputs.tag_name }}.zip
-        asset_content_type: application/gzip
+      run: semantic-release -branches main
+
