@@ -48,9 +48,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: npx semantic-release --branches main
 
-    - name: Get release
-      id: get_release
-      uses: bruceadams/get-release@v1.3.2
+    - name: Gets latest created release info
+      id: latest_release_info
+      uses: jossef/action-latest-release-info@v1.2.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
