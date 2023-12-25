@@ -1,3 +1,10 @@
+# [1.49.0](https://github.com/12evgen/test-vercel/compare/v1.48.0...v1.49.0) (2023-12-25)
+
+
+### Features
+
+* test deploy ([3ddb55e](https://github.com/12evgen/test-vercel/commit/3ddb55e8e015502237cf894b260a81f0f5696f77))
+
 # [1.48.0](https://github.com/12evgen/test-vercel/compare/v1.47.0...v1.48.0) (2023-12-25)
 
 
