@@ -1,3 +1,11 @@
+## [1.50.2](https://github.com/12evgen/test-vercel/compare/v1.50.1...v1.50.2) (2023-12-25)
+
+
+### Bug Fixes
+
+* test 2 ([47dd0a7](https://github.com/12evgen/test-vercel/commit/47dd0a7e4423ce02cfb8350441d835ddd2de0a4a))
+* test 3 ([ff1c78b](https://github.com/12evgen/test-vercel/commit/ff1c78b80a7c1d2dd9491dd51e9053b6ad8ea060))
+
 ## [1.50.1](https://github.com/12evgen/test-vercel/compare/v1.50.0...v1.50.1) (2023-12-25)
 
 
