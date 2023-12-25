@@ -1,3 +1,11 @@
+# [1.48.0](https://github.com/12evgen/test-vercel/compare/v1.47.0...v1.48.0) (2023-12-25)
+
+
+### Features
+
+* remove semantic-release ([d18f2e7](https://github.com/12evgen/test-vercel/commit/d18f2e7655857537f8add923b6ecd258f29d4ea2))
+* update code ([1346b52](https://github.com/12evgen/test-vercel/commit/1346b52c480d1551d592e405819925711821a5d6))
+
 # [1.47.0](https://github.com/12evgen/test-vercel/compare/v1.46.0...v1.47.0) (2023-12-25)
 
 
