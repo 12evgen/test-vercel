@@ -36,7 +36,7 @@ jobs:
           fileName: build.zip
 
       - name: 'Unpack build archive'
-        run: unzip build.zip
+        run: mkdir .vercel && unzip build.zip -d .vercel/output
 
       - name: 'Install Vercel CLI'
         run: npm install --global vercel@latest
