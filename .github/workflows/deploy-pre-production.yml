@@ -32,7 +32,7 @@ jobs:
       - name: 'Download asset from a specific release version'
         uses: robinraju/release-downloader@v1.8
         with:
-          latest: true
+          tag: "v1.0.0"
           fileName: ${{ github.event.inputs.versionBuild }}.zip
 
       - name: 'Unpack build archive'

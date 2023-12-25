@@ -12,7 +12,7 @@ env:
 
 jobs:
   frontend-build-and-deploy:
-    name: 'Deploy (staging'
+    name: 'Deploy (staging)'
     runs-on: ubuntu-latest
 
     environment:
