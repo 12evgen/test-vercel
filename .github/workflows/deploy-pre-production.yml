@@ -7,6 +7,9 @@ on:
         description: 'Version'
         required: true
 
+env:
+  PRE_PROD_HOST: test-vercel-pre-production.vercel.app
+
 jobs:
   deploy:
     name: 'Deploy (pre-production)'
@@ -49,4 +52,4 @@ jobs:
           echo "deployment-url=$deploymentUrl" >> $GITHUB_OUTPUT
 
       - name: 'Assign domains'
-        run: vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} test-vercel-pre-production.vercel.app --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ env.VERCEL_SCOPE }}
+        run: vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} ${{ env.PRE_PROD_HOST }} --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ env.VERCEL_SCOPE }}
