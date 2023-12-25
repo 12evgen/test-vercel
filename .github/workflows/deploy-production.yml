@@ -3,31 +3,30 @@ name: Deploy to production
 on:
   workflow_dispatch:
 
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
 jobs:
   deploy:
-    name: Deploy
+    name: 'Deploy'
     runs-on: ubuntu-latest
 
     environment:
-      name: production
+      name: 'production'
       url: https://test-vercel-production.vercel.app
 
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-
     steps:
-      - name: Checkout
+      - name: 'Checkout'
         uses: actions/checkout@v4
 
-      - name: Setup Node.js v18
+      - name: 'Setup Node.js v18'
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install Vercel CLI
+      - name: 'Install Vercel CLI'
         run: npm install --global vercel@latest
 
-      - name: Assign domains
+      - name: 'Assign domains'
         run: vercel alias set https://test-vercel-pre-production.vercel.app test-vercel-production.vercel.app --token=${{ secrets.VERCEL_TOKEN }}

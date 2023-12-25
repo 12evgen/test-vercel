@@ -1,8 +1,4 @@
-name: Deploy to pre production
-
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+name: 'Deploy to pre production'
 
 on:
   workflow_dispatch:
@@ -10,41 +6,46 @@ on:
       versionBuild:
         description: 'Version'
         required: true
-        default: 'latest'
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 jobs:
   deploy:
-    environment:
-      name: pre-production
-      url: https://test-vercel-pre-production.vercel.app
+    name: 'Deploy (pre-production)'
     runs-on: ubuntu-latest
 
+    environment:
+      name: 'pre-production'
+      url: https://test-vercel-pre-production.vercel.app
+
     steps:
-      - name: Checkout
+      - name: 'Checkout'
         uses: actions/checkout@v4
 
-      - name: Setup Node.js v18
+      - name: 'Setup Node.js v18'
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Download asset from a specific release version
+      - name: 'Download asset from a specific release version'
         uses: robinraju/release-downloader@v1.8
         with:
           latest: true
           fileName: ${{ github.event.inputs.versionBuild }}.zip
 
-      - name: Unpack build archive
+      - name: 'Unpack build archive'
         run: unzip ${{ github.event.inputs.versionBuild }}.zip
 
-      - name: Install Vercel CLI
+      - name: 'Install Vercel CLI'
         run: npm install --global vercel@latest
 
-      - name: Deploy project artifacts to Vercel
+      - name: 'Deploy project artifacts to Vercel'
         id: vercel-deploy
         run: |
           deploymentUrl=$(vercel deploy --prod --prebuilt --archive=tgz --token=${{ secrets.VERCEL_TOKEN }})
           echo "deployment-url=$deploymentUrl" >> $GITHUB_OUTPUT
 
-      - name: Assign domains
+      - name: 'Assign domains'
         run: vercel alias set ${{ steps.vercel-deploy.outputs.deployment-url }} test-vercel-pre-production.vercel.app --token=${{ secrets.VERCEL_TOKEN }}
