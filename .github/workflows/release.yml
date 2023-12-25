@@ -31,10 +31,10 @@ jobs:
     - name: 'Pull Vercel project settings'
       run: vercel pull --environment=production --yes --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ env.VERCEL_SCOPE }}
 
-    - name: 'Build project assets'
+    - name: 'Build project artifacts'
       run: |
-        vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-        zip build.zip .vercel -r
+        vercel build --prod --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ env.VERCEL_SCOPE }}
+        cd .vercel/output && zip ../../build.zip . -r
 
     - name: 'Generate semantic-release config'
       run: |
