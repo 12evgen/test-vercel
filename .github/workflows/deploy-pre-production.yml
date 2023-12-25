@@ -3,7 +3,7 @@ name: 'Deploy to pre production'
 on:
   workflow_dispatch:
     inputs:
-      versionBuild:
+      version:
         description: 'Version'
         required: true
 
@@ -32,11 +32,11 @@ jobs:
       - name: 'Download asset from a specific release version'
         uses: robinraju/release-downloader@v1.8
         with:
-          tag: "v1.0.0"
-          fileName: ${{ github.event.inputs.versionBuild }}.zip
+          tag: ${{ github.event.inputs.version }}
+          fileName: build.zip
 
       - name: 'Unpack build archive'
-        run: unzip ${{ github.event.inputs.versionBuild }}.zip
+        run: unzip build.zip
 
       - name: 'Install Vercel CLI'
         run: npm install --global vercel@latest
