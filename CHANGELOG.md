@@ -1,3 +1,13 @@
+## [1.50.1](https://github.com/12evgen/test-vercel/compare/v1.50.0...v1.50.1) (2023-12-25)
+
+
+### Bug Fixes
+
+* remove lint-commit.yml ([694fc6b](https://github.com/12evgen/test-vercel/commit/694fc6b46261f0849f7447dbe87132c1f49a2b3f))
+* test ([e951c5e](https://github.com/12evgen/test-vercel/commit/e951c5e540ed48e1d7ddd1a4f64e1be01844f539))
+* test pr ([07b8b43](https://github.com/12evgen/test-vercel/commit/07b8b43b453a65e3368d0b1f3b0181e57c426dcd))
+* update lint-pr.yml ([96fedd4](https://github.com/12evgen/test-vercel/commit/96fedd4a319e04d7ed56edbcc48652a8da60362a))
+
 # [1.50.0](https://github.com/12evgen/test-vercel/compare/v1.49.0...v1.50.0) (2023-12-25)
 
 
