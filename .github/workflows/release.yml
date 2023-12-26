@@ -5,7 +5,6 @@ on:
 
 jobs:
   release:
-    if: ${{ github.ref == 'refs/heads/main' }}
     name: 'Create GitHub Release'
     runs-on: ubuntu-latest
 
