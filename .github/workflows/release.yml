@@ -39,7 +39,7 @@ jobs:
 
     - name: 'Generate `semantic-release` config'
       run: |
-        cat <<EOF | tee .releaserc
+        cat >.releaserc <<EOL
           {
             "branches": [
               "+([0-9])?(.{+([0-9]),x}).x",
@@ -64,7 +64,7 @@ jobs:
               ]
             ]
           }    
-        EOF
+        EOL
 
     - name: 'Release'
       run: npx semantic-release
