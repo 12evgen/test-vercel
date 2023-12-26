@@ -5,6 +5,7 @@ on:
 
 jobs:
   release:
+    if: ${{ github.ref == 'refs/heads/main'}}
     name: 'Create GitHub Release'
     runs-on: ubuntu-latest
 
@@ -65,7 +66,7 @@ jobs:
         EOF
 
     - name: 'Setup semantic-release'
-      run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog -D
+      run: npm install -g semantic-release@22.0.12 @semantic-release/git@10.0.1 @semantic-release/changelog@6.0.3 -D
 
     - name: 'Release'
       run: npx semantic-release

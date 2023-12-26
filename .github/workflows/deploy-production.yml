@@ -14,7 +14,7 @@ jobs:
 
     environment:
       name: 'production'
-      url: https://test-vercel-production.vercel.app
+      url: https://${{ env.PROD_HOST }}
 
     env:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
