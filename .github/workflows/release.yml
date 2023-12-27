@@ -68,6 +68,8 @@ jobs:
         if [ -z "$NEW_VERSION" ]; then
           echo "::warning title=No Release::No relevant changes have been detected. The workflow will be terminated without publishing a new release."
         fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Read the Current Version Number
       if: env.NEW_VERSION != ''
