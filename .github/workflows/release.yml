@@ -60,6 +60,6 @@ jobs:
         EOF
 
     - name: 'Release'
-      run: npx semantic-release --debug
+      run: npx semantic-release --ci --debug
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
