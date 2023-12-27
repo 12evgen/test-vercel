@@ -59,17 +59,7 @@ jobs:
           }
         EOF
 
-    - run: npx semantic-release --dry-run
-      id: get-next-version
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Read version
-      run: |
-        echo "published: ${{ steps.get-next-version.outputs.new-release-published }}"
-        echo "new-release-version: ${{ steps.get-next-version.outputs.new-release-version }}"    
-
-    - name: Determine the New Version Number
+    - name: 'Determine the New Version Number'
       run: |
         NEW_VERSION=$(npx semantic-release --dry-run | grep 'next release version is' | sed 's/.*is //')
         echo "New version number: $NEW_VERSION"
@@ -77,16 +67,17 @@ jobs:
         
         if [ -z "$NEW_VERSION" ]; then
           echo "::warning title=No Release::No relevant changes have been detected. The workflow will be terminated without publishing a new release."
+          exit 1
         fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Read the Current Version Number
+    - name: 'Read the Current Version Number'
       if: env.NEW_VERSION != ''
       run: |
         CURRENT_VERSION=$(jq -r '.version' package.json)
         echo "Current version number: $CURRENT_VERSION"
-        echo "CURRENT_VERSION=$CURRENT_VERSION" >> $GITHUB_ENV    
+        echo "CURRENT_VERSION=$CURRENT_VERSION" >> $GITHUB_ENV
 
     - name: 'Release'
       if: env.NEW_VERSION != '' && env.NEW_VERSION != env.CURRENT_VERSION
