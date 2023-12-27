@@ -59,6 +59,16 @@ jobs:
           }
         EOF
 
+    - run: npx semantic-release --dry-run
+      id: get-next-version
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Read version
+      run: |
+        echo "published: ${{ steps.get-next-version.outputs.new-release-published }}"
+        echo "new-release-version: ${{ steps.get-next-version.outputs.new-release-version }}"    
+
     - name: Determine the New Version Number
       run: |
         NEW_VERSION=$(npx semantic-release --dry-run | grep 'next release version is' | sed 's/.*is //')
