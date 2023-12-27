@@ -41,7 +41,7 @@ jobs:
         cat <<EOF | tee .releaserc
           {
             "branches": [
-              "1.52.0",
+              "+([0-9])?(.{+([0-9]),x}).x",
               "main"
             ],
             "plugins": [
