@@ -56,7 +56,7 @@ jobs:
                 ]
               }],
               ["@semantic-release/exec", {
-                "successCmd": "test -z '\${nextRelease.version}' && echo 'ERROR'"
+                "successCmd": "[ -z '\${nextRelease.version}' ] && exit 1"
               }]
             ]
           }
