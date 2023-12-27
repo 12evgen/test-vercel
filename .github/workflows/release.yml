@@ -54,9 +54,6 @@ jobs:
                 "assets": [
                   { "path": "build.zip", "label": "Build (zip)" }
                 ]
-              }],
-              ["@semantic-release/exec", {
-                "successCmd": "test -z '${nextRelease.version}' && exit 1"
               }]
             ]
           }
