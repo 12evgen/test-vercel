@@ -59,11 +59,6 @@ jobs:
           }
         EOF
 
-    - name: 'Release test'
-      run: npx semantic-release --debug --dry-run
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
     - name: 'Determine the New Version Number'
       run: |
         NEW_VERSION=$(npx semantic-release --dry-run --debug | grep 'next release version is' | sed 's/.*is //')
