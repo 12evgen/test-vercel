@@ -41,7 +41,7 @@ jobs:
         cat <<EOF | tee .releaserc
           {
             "branches": [
-              "+([0-9])?(.{+([0-9]),x}).x",
+              "+([0-9]).x",
               "main"
             ],
             "plugins": [
@@ -58,6 +58,11 @@ jobs:
             ]
           }
         EOF
+
+    - name: 'Release test'
+      run: npx semantic-release --debug --dry-run
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: 'Determine the New Version Number'
       run: |
