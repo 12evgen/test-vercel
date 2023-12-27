@@ -1,3 +1,23 @@
+# [1.51.0](https://github.com/12evgen/test-vercel/compare/v1.50.6...v1.51.0) (2023-12-27)
+
+
+### Bug Fixes
+
+* fix code ([6a98fe9](https://github.com/12evgen/test-vercel/commit/6a98fe96e1d7cdcf4ec49ac0ac2f35ef35488ba4))
+* fix pattern ([e6a9b32](https://github.com/12evgen/test-vercel/commit/e6a9b326b91d1a59442c581b4aef9c998ea72077))
+* fix pattern 2 ([b48e485](https://github.com/12evgen/test-vercel/commit/b48e485725d7a7b30692a26bccd1a33792a3c67f))
+* fix pattern 3 ([7cbcbef](https://github.com/12evgen/test-vercel/commit/7cbcbef10a6e1bf295aad0bf044d9577f6966e1e))
+* fix pattern 6 ([a542451](https://github.com/12evgen/test-vercel/commit/a54245134a7d01195f0e7422ad3cc98d2a06ced3))
+* fix pattern 7 ([c7cb5b2](https://github.com/12evgen/test-vercel/commit/c7cb5b21e74ad66fdc6f885508839e4fc73a5235))
+* update code ([4263863](https://github.com/12evgen/test-vercel/commit/426386350aa42269aaa1e548a204bc04499a0f22))
+
+
+### Features
+
+* fix code ([b538991](https://github.com/12evgen/test-vercel/commit/b538991c519f52bdeab28b6345dc217732dfe7ba))
+* fix code 1 ([e2dc0fa](https://github.com/12evgen/test-vercel/commit/e2dc0fafae8901565359dfb0a86805780b4e829c))
+* fix code 2 ([d0cbb54](https://github.com/12evgen/test-vercel/commit/d0cbb5446ca05443d7b319056ea762e31910aba2))
+
 ## [1.50.6](https://github.com/12evgen/test-vercel/compare/v1.50.5...v1.50.6) (2023-12-27)
 
 
