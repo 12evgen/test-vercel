@@ -56,7 +56,10 @@ jobs:
                 ]
               }],
               ["@semantic-release/exec", {
-                "successCmd": "[ -z 123 ] && exit 1"
+                "successCmd": "|
+                  if [ ${nextRelease.version} ]
+                    then echo "Version file not found" && exit 1
+                  fi"
               }]
             ]
           }
