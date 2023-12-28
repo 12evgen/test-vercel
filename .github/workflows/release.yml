@@ -54,6 +54,9 @@ jobs:
                 "assets": [
                   { "path": "build.zip", "label": "Build (zip)" }
                 ]
+              }],
+              ["@semantic-release/exec", {
+                 "successCmd": "echo 'dd'"
               }]
             ]
           }
