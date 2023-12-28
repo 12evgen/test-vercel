@@ -56,7 +56,7 @@ jobs:
                 ]
               }],
               ["@semantic-release/exec", {
-                 "successCmd": "echo '${nextRelease.version}'"
+                 "successCmd": "echo ${nextRelease.version} > version.txt"
               }]
             ]
           }
