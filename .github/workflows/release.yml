@@ -38,7 +38,7 @@ jobs:
 
     - name: 'Generate `semantic-release` config'
       run: |
-        cat <<EOF > .releaserc.json
+        cat > .releaserc << EOF
         {
           "branches": [
             "+([0-9]).+([0-9]).+([0-9])",
