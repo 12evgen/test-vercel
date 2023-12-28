@@ -56,7 +56,7 @@ jobs:
                 ]
               }],
               ["@semantic-release/exec", {
-                 "successCmd": "echo '${nextRelease.gitTag}'"
+                 "successCmd": "echo '${nextRelease.version}'"
               }]
             ]
           }
