@@ -7,7 +7,7 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     ["@semantic-release/exec", {
-      "successCmd": "echo '${nextRelease.gitTag}' > version.txt"
+      "successCmd": "./script.sh"
     }]
   ]
 }
