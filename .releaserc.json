@@ -7,7 +7,7 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     ["@semantic-release/exec", {
-      "successCmd": "./script.sh '${nextRelease.version}'"
+      "successCmd": "if [ -z \"${nextRelease.version}\" ]; then\n  echo \"Version not specified; Exiting.\"\n  exit 1;\nfi"
     }]
   ]
 }
