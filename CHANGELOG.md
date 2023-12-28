@@ -1,3 +1,10 @@
+## [1.52.25](https://gh_personal/12evgen/test-vercel/compare/v1.52.24...v1.52.25) (2023-12-28)
+
+
+### Bug Fixes
+
+* change code 47 ([c8c592c](https://gh_personal/12evgen/test-vercel/commit/c8c592c60b74bb31dca42de4579637b3bfe927e5))
+
 ## [1.52.24](https://gh_personal/12evgen/test-vercel/compare/v1.52.23...v1.52.24) (2023-12-28)
 
 
