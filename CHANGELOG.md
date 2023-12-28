@@ -1,3 +1,17 @@
+## [1.52.21](https://gh_personal/12evgen/test-vercel/compare/v1.52.20...v1.52.21) (2023-12-28)
+
+
+### Bug Fixes
+
+* change code 42 ([77e1f2f](https://gh_personal/12evgen/test-vercel/commit/77e1f2f3aa37769d855206a90d01c356a8ed46ec))
+
+## [1.52.21](https://gh_personal/12evgen/test-vercel/compare/v1.52.20...v1.52.21) (2023-12-28)
+
+
+### Bug Fixes
+
+* change code 42 ([77e1f2f](https://gh_personal/12evgen/test-vercel/commit/77e1f2f3aa37769d855206a90d01c356a8ed46ec))
+
 ## [1.52.20](https://github.com/12evgen/test-vercel/compare/v1.52.19...v1.52.20) (2023-12-28)
 
 
