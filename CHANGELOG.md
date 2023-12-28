@@ -1,3 +1,10 @@
+## [1.52.48](https://github.com/12evgen/test-vercel/compare/v1.52.47...v1.52.48) (2023-12-28)
+
+
+### Bug Fixes
+
+* change code 80 ([5c61e94](https://github.com/12evgen/test-vercel/commit/5c61e94f67643c71aeb561214c4a84375a414fdd))
+
 ## [1.52.47](https://github.com/12evgen/test-vercel/compare/v1.52.46...v1.52.47) (2023-12-28)
 
 
