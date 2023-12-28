@@ -15,7 +15,7 @@
       ]
     }],
     ["@semantic-release/exec", {
-      "successCmd": "test -z ${nextRelease.version} && exit"
+      "successCmd": "test -z 1.52.28 && exit"
     }]
   ]
 }
