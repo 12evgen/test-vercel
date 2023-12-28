@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "commitlint": "commitlint --edit",
-    "release": "npm run with-env -- semantic-release --no-ci",
+    "release": "npm run with-env -- semantic-release --debug --no-ci",
     "with-env": "env-cmd --file .env.local --fallback --no-override --expand-envs"
   },
   "dependencies": {
