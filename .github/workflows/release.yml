@@ -56,10 +56,7 @@ jobs:
                 ]
               }],
               ["@semantic-release/exec", {
-                "successCmd": "|
-                  if [ ${nextRelease.version} ]
-                    then echo "Version file not found" && exit 1
-                  fi"
+                 "successCmd": "echo '${nextRelease.gitTag}' > version.txt"
               }]
             ]
           }
@@ -69,3 +66,11 @@ jobs:
       run: npx semantic-release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Validate release tag
+      shell: bash
+      run: >
+        if [[ ! -f version.txt ]]; then
+          echo "version.txt was not created, release aborted" 1>&2;
+          exit 1;
+        fi
