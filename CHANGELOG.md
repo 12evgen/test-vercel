@@ -1,3 +1,10 @@
+## [1.52.23](https://github.com/12evgen/test-vercel/compare/v1.52.22...v1.52.23) (2023-12-28)
+
+
+### Bug Fixes
+
+* change code 45 ([25a3249](https://github.com/12evgen/test-vercel/commit/25a3249ff28b6ac0f8119e9849a1a216bef86772))
+
 ## [1.52.21](https://gh_personal/12evgen/test-vercel/compare/v1.52.20...v1.52.21) (2023-12-28)
 
 
