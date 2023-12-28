@@ -56,7 +56,7 @@ jobs:
                 ]
               }],
               ["@semantic-release/exec", {
-                "successCmd": "echo 'TEST'"
+                "successCmd": "[ -z ${nextRelease.version} ] && exit 1"
               }]
             ]
           }
