@@ -36,12 +36,38 @@ jobs:
         vercel build --prod --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ env.VERCEL_SCOPE }}
         (cd .vercel/output && zip ../../build.zip . -r)
 
+    - name: 'Generate `semantic-release` config'
+      run: |
+        cat <<EOF > .releaserc
+          {
+            "branches": [
+              "+([0-9]).+([0-9]).+([0-9])",
+              "main"
+            ],
+            "plugins": [
+              "@semantic-release/commit-analyzer",
+              "@semantic-release/release-notes-generator",
+              "@semantic-release/changelog",
+              "@semantic-release/npm",
+              "@semantic-release/git",
+              ["@semantic-release/github", {
+                "assets": [
+                  { "path": "build.zip", "label": "Build (zip)" }
+                ]
+              }],
+              ["@semantic-release/exec", {
+                 "successCmd": "echo ${nextRelease.version} > version.txt"
+              }]
+            ]
+          }
+        EOF
+
     - name: 'Release'
       run: npx semantic-release --debug
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Validate release
+    - name: 'Validate release'
       shell: bash
       run: >
         if [[ ! -f version.txt ]]; then
