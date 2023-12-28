@@ -15,7 +15,7 @@
       ]
     }],
     ["@semantic-release/exec", {
-      "successCmd": "echo ${nextRelease.version} > version.txt"
+        "successCmd": "[ -z ${nextRelease.version} ] && exit 1"
     }]
   ]
 }
