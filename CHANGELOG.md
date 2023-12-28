@@ -1,3 +1,13 @@
+## [1.52.13](https://github.com/12evgen/test-vercel/compare/v1.52.12...v1.52.13) (2023-12-28)
+
+
+### Bug Fixes
+
+* change code 27 ([ddf5980](https://github.com/12evgen/test-vercel/commit/ddf59809d316213717cb69cebecfe15791251605))
+* change code 28 ([e1c4b73](https://github.com/12evgen/test-vercel/commit/e1c4b738a7b56d0ccc66da5656ea728b1023ca5a))
+* change code 29 ([20704a1](https://github.com/12evgen/test-vercel/commit/20704a18752c2b8d2c5fae58071b9915ba7260c0))
+* change code 30 ([b9bb918](https://github.com/12evgen/test-vercel/commit/b9bb918467abfc414866e6b3cd52e4c3de5e6a73))
+
 ## [1.52.12](https://github.com/12evgen/test-vercel/compare/v1.52.11...v1.52.12) (2023-12-28)
 
 
