@@ -1,3 +1,10 @@
+## [1.52.1](https://github.com/12evgen/test-vercel/compare/v1.52.0...v1.52.1) (2023-12-29)
+
+
+### Performance Improvements
+
+* perf test ([0883b5f](https://github.com/12evgen/test-vercel/commit/0883b5f8649500395c98cb3704967318472c52ef))
+
 # [1.52.0](https://github.com/12evgen/test-vercel/compare/v1.51.1...v1.52.0) (2023-12-27)
 
 
