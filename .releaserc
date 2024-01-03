@@ -1,0 +1,14 @@
+{
+  "branches": [
+    "+([0-9]).+([0-9]).+([0-9])",
+    "main"
+  ],
+  "plugins": [
+    ["@semantic-release/commit-analyzer", {
+      "preset": "conventionalchangelog",
+    }],
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+  ]
+}
