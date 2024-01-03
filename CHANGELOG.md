@@ -1,3 +1,29 @@
+## [1.52.1](https://gh_personal/12evgen/test-vercel/compare/v1.52.0...v1.52.1) (2024-01-03)
+
+
+### Bug Fixes
+
+* test ([46cd568](https://gh_personal/12evgen/test-vercel/commit/46cd568a11f79d2a7bc029cede946203c14bd8f5))
+* test 2 ([445fcd2](https://gh_personal/12evgen/test-vercel/commit/445fcd2486b7f973b6e14b15cca9cfa6a9c4e6b9))
+
+
+### Performance Improvements
+
+* perf test ([0883b5f](https://gh_personal/12evgen/test-vercel/commit/0883b5f8649500395c98cb3704967318472c52ef))
+
+## [1.52.1](https://gh_personal/12evgen/test-vercel/compare/v1.52.0...v1.52.1) (2024-01-03)
+
+
+### Bug Fixes
+
+* test ([46cd568](https://gh_personal/12evgen/test-vercel/commit/46cd568a11f79d2a7bc029cede946203c14bd8f5))
+* test 2 ([445fcd2](https://gh_personal/12evgen/test-vercel/commit/445fcd2486b7f973b6e14b15cca9cfa6a9c4e6b9))
+
+
+### Performance Improvements
+
+* perf test ([0883b5f](https://gh_personal/12evgen/test-vercel/commit/0883b5f8649500395c98cb3704967318472c52ef))
+
 ## [1.52.1](https://github.com/12evgen/test-vercel/compare/v1.52.0...v1.52.1) (2023-12-29)
 
 
