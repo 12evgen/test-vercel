@@ -1,3 +1,14 @@
+## [2.0.0](https://gh_personal/12evgen/test-vercel/compare/v1.58.0...v2.0.0) (2024-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* test major version
+
+### Miscellaneous Chores
+
+* test major version ([9617aea](https://gh_personal/12evgen/test-vercel/commit/9617aea16ba7fc2b192d18c20d3214e225191cf1))
+
 ## [1.58.0](https://gh_personal/12evgen/test-vercel/compare/v1.57.0...v1.58.0) (2024-01-03)
 
 
