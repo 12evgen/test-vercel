@@ -6,8 +6,13 @@
   "plugins": [
     ["@semantic-release/commit-analyzer", {
       "preset": "conventionalcommits",
+       "presetConfig": {
+       "issuePrefixes": ["AMA-"],
+       "issueUrlFormat": https://amatechs.atlassian.net/browse/{{prefix}}-{{id}}
+     },
     }],
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
+    "@semantic-release/npm",
   ]
 }
