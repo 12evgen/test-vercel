@@ -1,3 +1,10 @@
+## [1.56.0](https://gh_personal/12evgen/test-vercel/compare/v1.55.0...v1.56.0) (2024-01-03)
+
+
+### Features
+
+* test ([AMA-122](https://amatechs.atlassian.net/browse/AMA--122)) ([9787de9](https://gh_personal/12evgen/test-vercel/commit/9787de90020d3286754b1742ef433d301a07f639))
+
 # [1.55.0](https://gh_personal/12evgen/test-vercel/compare/v1.54.0...v1.55.0) (2024-01-03)
 
 
