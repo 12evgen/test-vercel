@@ -17,9 +17,19 @@ jobs:
       VERCEL_SCOPE: 1212evgen
 
     steps:
+      - name: 'Generate Github token for Github app'
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+
       - name: 'Checkout'
         uses: actions/checkout@v4
         with:
+          token: ${{ steps.app-token.outputs.token }}
+          ref: ${{ github.head_ref }}
+          # Make sure the value of GITHUB_TOKEN will not be persisted in repo's config
           persist-credentials: false
 
       - name: 'Setup Node.js v20'
@@ -28,7 +38,14 @@ jobs:
           node-version: 20
 
       - name: 'Install dependencies'
-        run: npm install --global vercel@33 semantic-release@22 @semantic-release/git@10 @semantic-release/changelog@6 @semantic-release/exec@6
+        run: |
+          npm install --global \
+            vercel@33 \
+            semantic-release@22 \
+            @semantic-release/git@10 \
+            @semantic-release/changelog@6 \
+            @semantic-release/exec@6 \
+            conventional-changelog-conventionalcommits@7 \
 
       - name: 'Pull Vercel project settings'
         run: vercel pull --environment=production --yes --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ env.VERCEL_SCOPE }}
@@ -43,12 +60,20 @@ jobs:
           cat <<EOF | tee .releaserc
           {
             "branches": [
-              "+([0-9]).+([0-9]).+([0-9])",
-              "main"
+              "main",
+              "+([0-9]).+([0-9]).x"
             ],
             "plugins": [
-              "@semantic-release/commit-analyzer",
-              "@semantic-release/release-notes-generator",
+              ["@semantic-release/commit-analyzer", {
+                "preset": "conventionalcommits",
+              }],
+              ["@semantic-release/release-notes-generator", {
+                "preset": "conventionalcommits",
+                "presetConfig": {
+                  "issuePrefixes": ["AMA-"],
+                  "issueUrlFormat": "https://amatechs.atlassian.net/browse/{{prefix}}{{id}}"
+                },
+              }],
               "@semantic-release/changelog",
               "@semantic-release/npm",
               "@semantic-release/git",
@@ -58,7 +83,7 @@ jobs:
                 ]
               }],
               ["@semantic-release/exec", {
-                "successCmd": "echo \${ nextRelease.version } > version.txt"
+                "successCmd": "echo \${ nextRelease.version } > .release-version"
               }]
             ]
           }
@@ -67,16 +92,13 @@ jobs:
       - name: 'Release'
         run: npx semantic-release --debug
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           GIT_AUTHOR_NAME: "12evgen-bot"
           GIT_AUTHOR_EMAIL: "12evgen@mail.ru"
           GIT_COMMITTER_NAME: "12evgen-bot"
           GIT_COMMITTER_EMAIL: "12evgen@mail.ru"
 
-      - name: 'Validate release'
-        shell: bash
-        run: >
-          if [[ ! -f version.txt ]]; then
-            echo "version.txt was not created, release aborted" 1>&2;
-            exit 1;
-          fi
+      - name: 'Verify release'
+        run: |
+          cat .release-version 2> /dev/null | head -n 1 | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' \
+            || (echo "Release is not successful." && exit 1)
