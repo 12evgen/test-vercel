@@ -1,3 +1,10 @@
+## [2.3.0](https://github.com/12evgen/test-vercel/compare/v2.2.0...v2.3.0) (2024-01-05)
+
+
+### Features
+
+* check permission 3 ([193e8c4](https://github.com/12evgen/test-vercel/commit/193e8c4fc3ee40d196ec79ee1933e339293be1da))
+
 ## [2.2.0](https://github.com/12evgen/test-vercel/compare/v2.1.0...v2.2.0) (2024-01-05)
 
 
